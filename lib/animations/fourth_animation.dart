@@ -1,7 +1,8 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:vector_math/vector_math_64.dart' hide Colors;
+import 'package:vector_math/vector_math_64.dart'
+    hide Colors; // Ensure Colors is not conflicting with vector_math_64
 
 class FourthAnimation extends StatefulWidget {
   const FourthAnimation({Key? key}) : super(key: key);
@@ -25,17 +26,17 @@ class _FourthAnimationState extends State<FourthAnimation>
     _xController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 20),
-    );
+    )..repeat();
 
     _yController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 30),
-    );
+    )..repeat();
 
     _zController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 40),
-    );
+    )..repeat();
 
     _animation = Tween<double>(
       begin: 0,
@@ -53,18 +54,6 @@ class _FourthAnimationState extends State<FourthAnimation>
 
   @override
   Widget build(BuildContext context) {
-    _xController
-      ..reset()
-      ..repeat();
-
-    _yController
-      ..reset()
-      ..repeat();
-
-    _zController
-      ..reset()
-      ..repeat();
-
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
