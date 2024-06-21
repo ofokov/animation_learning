@@ -76,7 +76,7 @@ class _FourthAnimationState extends State<FourthAnimation>
                 ..rotateZ(_animation.evaluate(_zController)),
               child: Stack(
                 children: [
-                  // back
+                  /// back
                   Transform(
                     alignment: Alignment.center,
                     transform: Matrix4.identity()
@@ -87,7 +87,8 @@ class _FourthAnimationState extends State<FourthAnimation>
                       height: widthAndHeight,
                     ),
                   ),
-                  // left side
+
+                  /// left side
                   Transform(
                     alignment: Alignment.centerLeft,
                     transform: Matrix4.identity()..rotateY(pi / 2.0),
@@ -97,7 +98,8 @@ class _FourthAnimationState extends State<FourthAnimation>
                       height: widthAndHeight,
                     ),
                   ),
-                  // left side
+
+                  /// right side
                   Transform(
                     alignment: Alignment.centerRight,
                     transform: Matrix4.identity()..rotateY(-pi / 2.0),
@@ -107,13 +109,15 @@ class _FourthAnimationState extends State<FourthAnimation>
                       height: widthAndHeight,
                     ),
                   ),
-                  // front
+
+                  /// front
                   Container(
                     color: Colors.blue,
                     width: widthAndHeight,
                     height: widthAndHeight,
                   ),
-                  // top side
+
+                  /// top side
                   Transform(
                     alignment: Alignment.topCenter,
                     transform: Matrix4.identity()..rotateX(-pi / 2.0),
@@ -123,7 +127,8 @@ class _FourthAnimationState extends State<FourthAnimation>
                       height: widthAndHeight,
                     ),
                   ),
-                  // bottom side
+
+                  /// bottom side
                   Transform(
                     alignment: Alignment.bottomCenter,
                     transform: Matrix4.identity()..rotateX(pi / 2.0),

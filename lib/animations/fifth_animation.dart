@@ -78,8 +78,8 @@ class _FifthAnimationState extends State<FifthAnimation> {
 
 final List<Person> people = [
   Person(name: 'John', age: 14, emoji: '🙂'),
-  Person(name: 'Azim', age: 14, emoji: '🙂'),
-  Person(name: 'Christophen', age: 14, emoji: '🙂'),
+  Person(name: 'Azim', age: 14, emoji: '💸'),
+  Person(name: 'Christophen', age: 14, emoji: '😭'),
 ];
 
 class Person {

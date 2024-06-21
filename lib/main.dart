@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
 }
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
       body: SafeArea(
         child: Column(
           children: [
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             TabBar(
               dividerColor: Colors.transparent,
               tabAlignment: TabAlignment.center,
@@ -79,7 +79,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
               child: TabBarView(
                 controller: tabController,
                 children: [
-                  Column(
+                  const Column(
                     children: [
                       SizedBox(height: 50),
                       FirstAnimation(),
@@ -93,25 +93,25 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
                   ),
                   Column(
                     children: [
-                      FourthAnimation(),
-                      SizedBox(height: 200),
+                      const FourthAnimation(),
+                      const SizedBox(height: 200),
                       InkWell(
                         onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
-                                builder: (context) => FifthAnimation()),
+                                builder: (context) => const FifthAnimation()),
                           );
                         },
                         child: Container(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                             horizontal: 24,
                             vertical: 18,
                           ),
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             borderRadius: BorderRadius.all(Radius.circular(8)),
                             color: Colors.blue,
                           ),
-                          child: Text(
+                          child: const Text(
                             "Let's see the next animation",
                             style: TextStyle(
                               fontSize: 18,
